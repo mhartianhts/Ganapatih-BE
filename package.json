@@ -1,0 +1,33 @@
+{
+  "name": "ganapatih-be",
+  "version": "1.0.0",
+  "description": "Backend for Ganapatih Application",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:sync": "node src/database/sync.js safe",
+    "db:sync:alter": "node src/database/sync.js alter",
+    "db:sync:force": "node src/database/sync.js force",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mhartian",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
