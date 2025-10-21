@@ -232,11 +232,55 @@ Gunakan endpoint `/api/auth/refresh` dengan refresh token untuk mendapatkan acce
 
 ## 🧪 Testing
 
+Project ini sudah dilengkapi dengan automated tests menggunakan Jest dan Supertest.
+
+### Setup Testing Environment
+
+1. Buat database terpisah untuk testing:
 ```bash
-npm test
+createdb ganapatih_test_db
 ```
 
-*Note: Test belum dikonfigurasi. Akan ditambahkan di versi mendatang.*
+2. Buat file `.env.test` dengan konfigurasi test environment (lihat `.env.test.example`)
+
+3. Install dependencies (sudah included):
+```bash
+npm install
+```
+
+### Menjalankan Tests
+
+```bash
+# Run all tests
+npm test
+
+# Run tests dengan watch mode
+npm run test:watch
+
+# Run tests dengan coverage report
+npm run test:coverage
+
+# Run specific test file
+npm test -- auth
+npm test -- posts
+npm test -- follow
+npm test -- users
+```
+
+### Test Documentation
+
+- 📄 **Manual Test Cases**: Lihat [TEST_CASES.md](TEST_CASES.md) untuk dokumentasi lengkap test cases
+- 📁 **Automated Tests**: Lihat folder `tests/` untuk automated test files
+- 📖 **Testing Guide**: Lihat [tests/README.md](tests/README.md) untuk panduan lengkap testing
+
+### Test Coverage
+
+Total **40+ automated tests** mencakup:
+- ✅ Authentication (Register, Login, Refresh Token)
+- ✅ Posts (Create, Feed dengan pagination)
+- ✅ Follow/Unfollow (Follow user, Unfollow user)
+- ✅ User Search (Pencarian dengan keyword dan limit)
+- ✅ Health Check (Status database)
 
 ## 📝 Environment Variables
 

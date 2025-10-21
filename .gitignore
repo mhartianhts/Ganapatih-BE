@@ -133,8 +133,8 @@ uploads/*
 # PM2
 .pm2/ 
 
-test
-backup
+# Ignore backup folder but not test files
+backup/
 
 .cursor/
 
@@ -149,18 +149,15 @@ backup
 *.xlsx
 *.ppt
 *.pptx
-# But don't ignore README.md
+# But don't ignore important documentation
 !README.md
+!TEST_CASES.md
+!tests/README.md
+!TESTING_SETUP.md
+!SUMMARY_TESTING.md
+!QUICK_START_TESTING.md
 
-example*
-test*
-test*
-test*
-test*
-test*
-test*
-tes*
-test*
-test*
-test*
-test*
+# Don't ignore test files and folders for the test suite
+!tests/
+!jest.config.js
+!env.test.example
